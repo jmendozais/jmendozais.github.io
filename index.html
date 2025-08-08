@@ -1,0 +1,471 @@
+<!-- TODO
+ + Fix responsivenes from timelines and cards to smaller window sizes
+ + Better font
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julio Mendoza | AI Researcher & Data Scientist</title>
+    <meta name="description" content="Portfolio of Julio Mendoza, an AI Researcher and Data Scientist specializing in Deep Learning and Computer Vision.">
+    <meta name="keywords" content="AI Researcher, Data Scientist, Machine Learning, Deep Learning, Computer Vision, Julio Mendoza">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+<body>
+    <aside id="sidebar-nav">
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#research"><i class="fas fa-flask"></i> Porfolio</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="theme-switcher">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-top-left">
+                        <img src="imgs/face.jpg" alt="Julio Mendoza" class="profile-photo">
+                    </div>
+                    
+                    <div class="hero-top-right">
+                        <h1>Julio Mendoza</h1>
+                        <p class="subtitle"><b>AI Researcher | Data Scientist | Computer Vision Specialist</b></p>
+                        <div class="contact-icons">
+                            <a href="https://www.linkedin.com/in/juliomb" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/jmendozais" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://scholar.google.com.br/citations?user=IOWmRoQAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="mailto:jmendozais@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="https://drive.google.com/file/d/1YcXGD6lH1scDp0tb8k4Yu8qb25U-NmL1/view" download title="Download Resume"><i class="fas fa-file-pdf"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="bio">
+                        <p>
+                        I am an Artificial Intelligence (AI) researcher and Data Scientist. I recently worked as AI researcher at the <a href="https://research.samsung.com/srbr">Samsung R&D Institute Brazil</a> where he developed solutions for health and wellness for smartphone and wearable devices
+                        </p><p>
+                        My expertise is backed by deep academic research. I earned a Ph.D. in Computer Science from the <a href="https://ic.unicamp.br/">University of Campinas</a>, where I researched methods for understanding video scenes without direct supervision. I also got a Master's, also at the <a href="https://ic.unicamp.br/">University of Campinas</a>, where I applied Convolutional Neural Networks to medical imaging for Lung Nodule Detection. I holds a BE in Systems Engineering from the <a href="https://www.unsa.edu.pe/en/">National University of San Agustin (UNSA)</a>.
+                        </p><p>
+                        Prior to my specialization in AI, I gained practical software engineering experience through roles as a software engineer at <a href="https://www.zagile.com/">zAgile</a> and a software developer at <a href="https://www.scylla.com.br/">Scylla Informatica</a>. Passionate about AI and Computer Vision community, I also co-organized the first <a href="https://www.latinxinai.org/cvpr-2021-about">LatinX in Computer Vision (LXCV)</a> workshop at CVPR 2021.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="timeline-card">
+                        <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h5>AI Researcher Senior Specialist</h5>
+                                <p class="timeline-meta">Samsung | Mar 2024 - Apr 2025</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>AI Researcher Specialist</h5>
+                                <p class="timeline-meta">Samsung | May 2022 - Mar 2024</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Software Developer</h5>
+                                <p class="timeline-meta">Scylla Bioinformatica | Mar 2015 - Jul 2016</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5>Software Consultant</h5>
+                                <p class="timeline-meta">zAgile Inc. (Remote) | Jun 2013 - Feb 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div class="timeline">
+                             <div class="timeline-item">
+                                <h5>PhD. in Computer Science</h5>
+                                <p class="timeline-meta">University of Campinas | 2017 - 2022</p>
+                            </div>
+                             <div class="timeline-item">
+                                <h5>M.Sc. in Computer Science</h5>
+                                <p class="timeline-meta">University of Campinas | 2016 - 2017</p>
+                            </div>
+                             <div class="timeline-item">
+                                <h5>B.E. in Systems Engineering</h5>
+                                <p class="timeline-meta">National University of San Agustin | 2007 - 2012</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <h3><i class="fas fa-heart"></i> Interests</h3>
+                        <ul>
+                            <li>Applied Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Generative AI</li>
+                            <li>Natural Language Processing</li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                        <h3><i class="fas fa-language"></i> Languages</h3>
+                        <ul>
+                            <li><span class="icon-text">🇪🇸</span> Spanish (Native)</li>
+                            <li><span class="icon-text">🇧🇷</span> Portuguese (Fluent)</li>
+                            <li><span class="icon-text">🇺🇸</span> English (Proficient)</li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                        <ul>
+                            <li>
+                                Generative Al with LLMs (Coursera)
+                                <img src="imgs/coursera.png" alt="Coursera Logo" class="cert-icon">
+                                
+                            </li>
+                            <li>
+                                Deep Learning Specialization (Coursera)
+                                <img src="imgs/deeplearning_ai.png" alt="DLAI Logo" class="cert-icon">
+                            </li>
+                            <li>
+                                Generative AI, from GANs to CLIP (Udemy)
+                                <img src="imgs/udemy.png" alt="Udemy Logo" class="cert-icon">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                    <h3><i class="fas fa-cogs"></i> Skills</h3>
+                    <h4 class="skills-subtitle">Concepts & Fields</h4>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI & ML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Deep Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Data Science</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-image"></i>
+                            <span>Image Processing</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Research</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>Software Dev</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Data Structures</span>
+                        </div>
+                    </div>
+
+                    <h4 class="skills-subtitle">Technologies & Tools</h4>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="devicon-python-plain"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-cplusplus-plain"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-java-plain"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-pytorch-original"></i>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://www.tensorflow.org" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                            <i class="devicon-tensorflow-original"></i>
+                            <span>TensorFlow</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-scikitlearn-plain"></i>
+                            <span>Scikit-Learn</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-numpy-plain"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-apachespark-original"></i>
+                            <span>PySpark</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-jupyter-plain"></i>
+                            <span>Jupyter</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-anaconda-original"></i>
+                            <span>Conda</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-git-plain"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-linux-plain"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-windows8-original"></i>
+                            <span>Windows</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                 <div class="cta-container">
+                    <a href="mailto:jmendozais@gmail.com" class="btn"><i class="fas fa-envelope"></i>&nbsp&nbsp&nbspGet In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="content-section-light">
+            <div class="container">
+                <h2>Portfolio</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="project">Projects</button>
+                    <button class="filter-btn" data-category="research">Research</button>
+                </div>
+                
+                <div class="projects-container">
+                    <div class="project-card" data-category="project">
+                        <!-- This is the left column -->
+                        <img src="imgs/risk-roc.png" alt="icpria" class="project-img">
+                        
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Credit Risk Prediction</h4>
+                            <p>This project applies machine learning models to assess home credit default risk, showcasing work in the finance domain.</p>
+                            <div class="project-urls">
+
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/home-credit-default-risk" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="research">
+                        <!-- This is the left column -->
+                        <img src="imgs/swa.png" alt="icpria" class="project-img">
+                        
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Self-distilled Self-supervised depth estimation</h4>
+                            <p><b>J. Mendoza, H. Pedrini</b></p>
+                            <p><i>ICPRAI, 2022 | ETPRAI, 2024</i></p>
+                            <p>Enhanced self-supervised monocular depth estimation through self-distillation and prediction consistency, achieving competitive performance on the KITTI benchmark.</p>
+                            <div class="project-urls">
+                                <!-- Button for the PDF Paper -->
+                                <a href="https://dl.acm.org/doi/abs/10.1007/978-3-031-09037-0_35" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Paper
+                                </a>
+
+                                <a href="https://www.worldscientific.com/doi/abs/10.1142/9789811289125_0007" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Book Chapter
+                                </a>
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/SDSSDepth" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="research">
+                        <!-- This is the left column -->
+                        <img src="imgs/icig-res.png" alt="icig" class="project-img">
+                        
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Adaptive self-supervised depth estimation</h4>
+                            <p><b>J. Mendoza, H. Pedrini</b></p>
+                            <p><i>ICIG, 2021</i></p>
+                            <p>Developed adaptive strategies for self-supervised depth estimation using adaptive consistency loss and uncertainty weighting to achieve state-of-the-art results.</p>
+                            <div class="project-urls">
+                                <!-- Button for the PDF Paper -->
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-030-87361-5_56" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Paper
+                                </a>
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/SDSSDepth" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="research">
+                        <!-- This is the left column -->
+                        <img src="imgs/fs.png" alt="icig" class="project-img">
+                        
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Self-supervised Depth Estimation based on Feature Sharing and Consistency Constraints</h4>
+                            <p><b>J. Mendoza, H. Pedrini</b></p>
+                            <p><i>VISAPP, 2020</i></p>
+                            <p> Developed a self-supervised method for monocular depth estimation that relies on a depth consistency constraint, a soft visibility map that reduces the error contribution in depth inconsistent regions, and sharing features from the depth to the camera motion networks.</p>
+                            <div class="project-urls">
+                                <!-- Button for the PDF Paper -->
+                                <a href="https://www.scitepress.org/PublishedPapers/2020/89759/89759.pdf" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Paper
+                                </a>
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/DCFSGNet" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="research">
+                        <!-- This is the left column -->
+                        <img src="imgs/dcln.png" alt="icig" class="project-img">
+                        
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Detection and classification of lung nodules in chest X‐ray images using deep convolutional neural networks</h4>
+                            <p><b>J. Mendoza, H. Pedrini</b></p>
+                            <p><i>CI, 2019</i></p>
+                            <p>Proposed and analyzed a pipeline for detecting lung nodules in CXR images that includes lung area segmentation, nodule candidate localization, and nodule candidate classification</p>
+                            <div class="project-urls">
+                                <!-- Button for the PDF Paper -->
+                                <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/coin.12241" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Paper
+                                </a>
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/lung-nodule-detection" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="research">
+                        <!-- This is the left column -->
+                        <img src="imgs/cln.png" alt="icig" class="project-img">
+                        
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Lung Nodule Classification using Deep Neural Networks</h4>
+                            <p><b>J. Mendoza, H. Pedrini</b></p>
+                            <p><i>CIARP, 2019</i></p>
+                            <p>Proposed a method based on convolutional neural networks to classify lung nodules in chest radiographs. Our method outperforms the baseline work without the need of extracting several features from the images.</p>
+                            <div class="project-urls">
+                                <!-- Button for the PDF Paper -->
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-319-52277-7_15" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Paper
+                                </a>
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/lung-nodule-detection" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TODO: Early stopping two stream -->
+
+                    <div class="project-card" data-category="project">
+                        <!-- This is the left column -->
+                        <img src="imgs/borehole.png" alt="icig" class="project-img">
+                        
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Detection and Classification of Sedimentological Borehole Images</h4>
+                            <p>Developed a method to segment sedimentological regions using adaptive thresholding and to classify borehole segments using deep neural networks.
+                            <div class="project-urls">
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/sedim-analyzer" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="project">
+                        <!-- This is the left column -->
+                        <img src="imgs/license.jpg" alt="icig" class="project-img">
+
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>License Plate Localization and Recognition</h4>
+                            <p>Developed adaptive strategies for self-supervised depth estimation using adaptive consistency loss and uncertainty weighting to achieve state-of-the-art results.</p>
+                            <div class="project-urls">
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/licence-plate-challenge-MO466" target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p class="contact-intro">I'm always open to discussing new projects, research ideas, or collaboration opportunities. Please feel free to reach out.</p>
+                <div class="contact-links">
+                    <a href="mailto:jmendozais@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> jmendozais@gmail.com</a>
+                    <a href="https://linkedin.com/in/juliomb" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/jmendozais" target="_blank" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
