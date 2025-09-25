@@ -1,17 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+    console.log("TEST")
     // --- Theme Toggler ---
-    const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
+    const themeToggleButton = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+
+    // Function to update the icon based on the current theme
+    const updateIcon = () => {
+        if (body.classList.contains('dark-mode')) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        } else {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+    };
 
     // Function to apply the theme
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             body.classList.add('dark-mode');
-            themeToggle.checked = true;
+            updateIcon();
         } else {
             body.classList.remove('dark-mode');
-            themeToggle.checked = false;
+            updateIcon();
         }
     };
 
@@ -23,17 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
         applyTheme('light');
     }
 
-    // Event listener for the toggle
-    themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
-            localStorage.setItem('theme', 'dark');
-            applyTheme('dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-            applyTheme('light');
-        }
+    // Event listener for the button click
+    themeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        // After toggling, update the icon
+        updateIcon();
     });
 
+    // Set the correct icon when the page loads
+    updateIcon();
 
     // --- Project Filtering ---
     const filterContainer = document.querySelector('.filter-buttons');
@@ -67,7 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Active Nav Link on Scroll ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#navbar a');
-    const headerHeight = document.getElementById('main-header').offsetHeight;
+    console.log("TEST 2")
+
+    const headerHeight = 0 //document.getElementById('navbar').offsetHeight;
+    console.log("TEST 3")
 
     function navHighlighter() {
         let scrollY = window.pageYOffset;
@@ -92,4 +105,23 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', navHighlighter);
     navHighlighter(); // Initial check
 
+        // --- Mobile Menu Toggle ---
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks2 = document.querySelector('#navbar ul');
+    console.log("TEST")
+    console.log(navLinks2)
+    if (menuToggle && navLinks2) {
+        menuToggle.addEventListener('click', () => {
+            navLinks2.classList.toggle('navbar-active');
+        });
+        
+        // Optional: Close menu when a link is clicked
+        navLinks2.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks2.classList.contains('navbar-active')) {
+                    navLinks2.classList.remove('navbar-active');
+                }
+            });
+        });
+    }
 });

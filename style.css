@@ -86,6 +86,18 @@ ul {
     list-style: none;
 }
 
+/* --- Menu Toggle Button --- */
+.menu-toggle-button {
+    display: none; /* Hidden by default on large screens */
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    z-index: 1100; /* Ensure it's on top */
+}
+
 /* --- Sidebar Navigation --- */
 #sidebar-nav {
     width: var(--sidebar-width);
@@ -164,51 +176,41 @@ ul {
     padding: 1rem 2rem;
 }
 
-/* --- Theme Switcher --- */
-.theme-switcher {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: var(--text-color);
-}
+/* --- New Theme Toggle Button --- */
+.theme-toggle-button {
+    /* Positioning */
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 2000;
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 26px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
+    /* Styling */
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    width: 30px;  /* Control the size */
+    height: 30px; /* Control the size */
+    border-radius: 50%; /* Makes it circular */
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 26px;
+    
+    /* Center the icon inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Icon Style */
+    font-size: 1.2rem;
+    color: var(--text-color);
+    
+    /* Effects */
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: all 0.3s ease;
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+.theme-toggle-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px var(--shadow-color);
 }
+
 
 input:checked+.slider {
     background-color: var(--primary-color);
@@ -276,8 +278,9 @@ input:checked+.slider:before {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 0px solid var(--primary-color);
-}
+    border: 0.3rem solid white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}   
 
 .hero-intro .name {
     font-size: 3.5rem;
@@ -736,13 +739,20 @@ input:checked+.slider:before {
         height: auto;
         position: sticky;
         flex-direction: row;
+        justify-content: space-between; /* Pushes toggle to the right */
         align-items: center;
         padding: 0.5rem 1rem;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
     }
 
+    /* Show the hamburger menu button */
+    .menu-toggle-button {
+        display: block; 
+    }
+
     .sidebar-header .sidebar-title,
+    
     .sidebar-footer {
         display: none;
     }
@@ -752,23 +762,43 @@ input:checked+.slider:before {
     }
 
     #navbar {
-        flex-grow: 1;
+        /* Remove flex-grow to not interfere with the button */
+        position: static; 
     }
 
     #navbar ul {
-        flex-direction: row;
-        justify-content: center;
-        height: auto;
+        display: none; /* Hide the menu by default */
+        position: relative;
+        top: 0px; /* Position it below the header (adjust if needed) */
+        left: 0;
+        width: 100%;
+        background-color: var(--surface-color);
+
+        flex-direction: column;
+
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 10px var(--shadow-color);
+    }
+
+    #navbar ul.navbar-active {
+        display: flex;
+        /*flex-direction: column;*/
     }
 
     #navbar ul li a {
-        padding: 0.5rem 1rem;
+        padding: 1rem;
+        text-align: center;
         border-left: none;
-        border-bottom: 4px solid transparent;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    #navbar ul li:last-child a {
+        border-bottom: none;
     }
 
     #navbar ul li a.active {
-        border-bottom-color: var(--primary-color);
+        /*  border-bottom-color: var(--background-color); */
+        border-bottom: 1px solid var(--border-color); 
         background: none;
     }
 
@@ -868,7 +898,7 @@ input:checked+.slider:before {
     h2 {
         font-size: 2rem;
     }
-
+/*
     #navbar ul {
         flex-wrap: wrap;
     }
@@ -890,3 +920,4 @@ input:checked+.slider:before {
         font-size: 1.2rem;
     }
 }
+*/
