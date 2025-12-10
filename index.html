@@ -40,9 +40,9 @@
 
     <button id="theme-toggle-btn" class="theme-toggle-button" aria-label="Toggle theme">
         <i id="theme-icon" class="fas fa-sun"></i>
-    </button> 
+    </button>
 
-    
+
     <main class="main-content">
         <section id="home" class="hero-section">
             <div class="container">
@@ -71,7 +71,7 @@
                         <p>
                             I am an Artificial Intelligence (AI) researcher and Data Scientist. I recently worked as AI
                             researcher at the <a href="https://research.samsung.com/srbr">Samsung R&D Institute
-                            Brazil</a> where I developed solutions for health and wellness for smartphone and
+                                Brazil</a> where I developed solutions for health and wellness for smartphone and
                             wearable devices
                         </p>
                         <p>
@@ -282,12 +282,144 @@
                 <h2>Portfolio</h2>
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-category="all">All</button>
-                    <button class="filter-btn" data-category="project">Projects</button>
+                    <button class="filter-btn" data-category="generative-ai">Gen AI</button>
+                    <button class="filter-btn" data-category="computer-vision">Vision</button>
+                    <button class="filter-btn" data-category="traditional-ML">ML</button>
                     <button class="filter-btn" data-category="research">Research</button>
                 </div>
 
                 <div class="projects-container">
-                    <div class="project-card" data-category="research">
+    
+                    <div class="project-card" data-category="generative-ai">
+                        <!-- This is the left column -->
+                        <img src="imgs/icaif25.png" alt="CASML - Generative AI Hackathon" class="project-img"
+                            style="transition: opa style.opacity=0; setTimeout(()=>{this.src='imgs/icaif25.png'; this.style.opacity=1;}, 400);">
+
+                        <div class="project-info">
+                            <h4>ACM-ICAIF '25 - Agentic Retrieval Grand Challenge</h4>
+                            <p>Developed a retrieval system based on semantic and keyword embeddings capable selecting
+                                the most relevant finantial document types and identifying the most relevant passage
+                                within a single finantial document.
+                                Finetuned a SentenceTransformer on finantial data using semantic text similarity and
+                                parameter efficient finetuning (specifically LoRA) for generating high-quality semantic
+                                embeddings.
+                                Used FAISS for efficient similarity search and retrieval.
+                                <!-- <b>Achieved a public score on par with the Top 20%</b> of the Kaggle competition participants. -->
+                            </p>
+                            <div class="project-tags">
+                                <span>PEFT/LoRA</span>
+                                <span>SentenceTransformers</span>
+                                <span>FAISS</span>
+                            </div>
+                            <div class="project-urls">
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/Agentic-Retrieval-Grand-Challenge-ACM-ICAIF-25"
+                                    target="_blank" class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card" data-category="generative-ai">
+                        <!-- This is the left column -->
+                        <img src="imgs/casml.png" alt="CASML - Generative AI Hackathon" class="project-img"
+                            style="transition: opacity 0.4s;"
+                            onmouseover="this.style.opacity=0; setTimeout(()=>{this.src='imgs/casml.png'; this.style.opacity=1;}, 400);"
+                            onmouseout="this.style.opacity=0; setTimeout(()=>{this.src='imgs/casml.png'; this.style.opacity=1;}, 400);">
+
+                        <div class="project-info">
+                            <h4>CASML - Generative AI Hackathon</h4>
+                            <p>Developed a RAG system capable of answering questions based on an external PDF source.
+                                Evaluated methods for chunking. Implemented a hybrid retriever with keyword and semantic
+                                embeddings.
+                                Implemented a reranking approach based on Hypothetical Document Embeddings.
+                                <b>Achieved a public score on par with the Top 20%</b> of the Kaggle competition
+                                participants.
+                            </p>
+                            <div class="project-tags">
+                                <span>Databricks</span>
+                                <span>LangChain</span>
+                                <span>LangGraph</span>
+                                <span>Chroma</span>
+                            </div>
+                            <div class="project-urls">
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/CASML-Generative-AI-Hackathon" target="_blank"
+                                    class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="traditional-ML">
+                        <!-- This is the left column -->
+                        <img src="imgs/HCDR-pipeline.png" alt="Credit Risk ROC Curve" class="project-img"
+                            style="transition: opacity 0.4s;"
+                            onmouseover="this.style.opacity=0; setTimeout(()=>{this.src='imgs/risk-ROC.png'; this.style.opacity=1;}, 400);"
+                            onmouseout="this.style.opacity=0; setTimeout(()=>{this.src='imgs/HCDR-pipeline.png'; this.style.opacity=1;}, 400);">
+
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Credit Risk Prediction</h4>
+                            <p>Develop a ML pipeline to tackle the Home Credit Default Risk prediction problem, utilizing techniques 
+                                such as Multi-Scale Temporal Feature Aggregation and engineering domain features to extract predictive signals from tabular data. 
+                                The pipeline delivered a high-performance model that achieved a ROC-AUC of 0.7795 on the evaluation protocol of the competition.</p>
+                            <div class="project-tags">
+                                <span>Scikit-Learn</span>
+                            </div>
+                            <div class="project-urls">
+                                <!-- Button for the GitHub Project -->
+                                <a href="https://github.com/jmendozais/home-credit-default-risk" target="_blank"
+                                    class="project-link github">
+                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects-container">
+                    <div class="project-card" data-category="research computer-vision">
+                        <!-- This is the left column -->
+                        <img src="imgs/self-sup-depth-motion.png" alt="icpria" class="project-img">
+
+                        <!-- NEW: Wrapper for all the text content -->
+                        <div class="project-info">
+                            <h4>Improving loss functions and feature utilization for self-supervised single image depth
+                                estimation from monocular videos</h4>
+                            <p><b>J. Mendoza</b></p>
+                            <p><i>Ph.D. Dissertation, 2022</i></p>
+                            <p>This thesis focuses on improving self-supervised single-image dense depth estimation
+                                using monocular videos for training,
+                                where the primary challenge is mitigating the negative effect of incorrect pixel
+                                correspondence estimates
+                                on the view reconstruction loss. The work addresses this by developing multiple loss
+                                function mechanisms,
+                                including a depth consistency heuristic, an adaptive loss attenuation mechanism,
+                                and an adaptive consistency loss that uses minimum re-projection error to reduce the
+                                influence of unreliable pixels.
+                                Additionally, the research enhances the model's performance by proposing methods to
+                                better leverage learned
+                                feature representations and introducing a self-distillation technique via prediction
+                                consistency to further
+                                optimize the network for depth estimation.</p>
+                            <div class="project-urls">
+                                <!-- Button for the PDF Paper -->
+                                <a href="https://hdl.handle.net/20.500.12733/5081" target="_blank" class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Dissertation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-container">
+                    <div class="project-card" data-category="research computer-vision">
                         <!-- This is the left column -->
                         <img src="imgs/swa.png" alt="icpria" class="project-img">
 
@@ -321,7 +453,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="research">
+                    <div class="project-card" data-category="research computer-vision">
                         <!-- This is the left column -->
                         <img src="imgs/icig-res.png" alt="icig" class="project-img">
 
@@ -349,7 +481,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="research">
+                    <div class="project-card" data-category="research computer-vision">
                         <!-- This is the left column -->
                         <img src="imgs/fs.png" alt="icig" class="project-img">
 
@@ -359,7 +491,7 @@
                             </h4>
                             <p><b>J. Mendoza, H. Pedrini</b></p>
                             <p><i>VISAPP, 2020</i></p>
-                            <p> Developed a self-supervised method for monocular depth estimation that relies on a depth
+                            <p>Developed a self-supervised method for monocular depth estimation that relies on a depth
                                 consistency constraint, a soft visibility map that reduces the error contribution in
                                 depth inconsistent regions, and sharing features from the depth to the camera motion
                                 networks.</p>
@@ -380,7 +512,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="research">
+                    <div class="project-card" data-category="research computer-vision">
                         <!-- This is the left column -->
                         <img src="imgs/dcln.png" alt="icig" class="project-img">
 
@@ -389,12 +521,17 @@
                             <h4>Detection and classification of lung nodules in chest X‐ray images using deep
                                 convolutional neural networks</h4>
                             <p><b>J. Mendoza, H. Pedrini</b></p>
-                            <p><i>CI, 2019</i></p>
+                            <p><i>Master Thesis, 2018 | CI, 2019</i></p>
                             <p>Proposed and analyzed a pipeline for detecting lung nodules in CXR images that includes
                                 lung area segmentation, nodule candidate localization, and nodule candidate
-                                classification</p>
+                                classification.</p>
                             <div class="project-urls">
                                 <!-- Button for the PDF Paper -->
+                                <a href="https://hdl.handle.net/20.500.12733/1633046" target="_blank"
+                                    class="project-link">
+                                    <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
+                                    Thesis
+                                </a>
                                 <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/coin.12241" target="_blank"
                                     class="project-link">
                                     <i class="fas fa-file-pdf"></i> <!-- Icon for PDF -->
@@ -410,7 +547,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="research">
+                    <div class="project-card" data-category="research computer-vision">
                         <!-- This is the left column -->
                         <img src="imgs/cln.png" alt="icig" class="project-img">
 
@@ -440,63 +577,7 @@
                     </div>
 
                     <!-- TODO: Early stopping two stream -->
-                    <div class="project-card" data-category="project">
-                        <!-- This is the left column -->
-                        <img src="imgs/HCDR-pipeline.png" alt="Credit Risk ROC Curve" class="project-img"
-                            style="transition: opacity 0.4s;"
-                            onmouseover="this.style.opacity=0; setTimeout(()=>{this.src='imgs/risk-ROC.png'; this.style.opacity=1;}, 400);"
-                            onmouseout="this.style.opacity=0; setTimeout(()=>{this.src='imgs/HCDR-pipeline.png'; this.style.opacity=1;}, 400);">
-
-                        <!-- NEW: Wrapper for all the text content -->
-                        <div class="project-info">
-                            <h4>Credit Risk Prediction</h4>
-                            <p>Developed a ML pipeline for the Home Credit Default Risk Kaggle competition. 
-                                I framed the problem as a binary classification. The best model
-                                obtained a score of 0.7795 (ROC-AUC) in the public leaderboard of the competition.</p>
-                            <div class="project-tags">
-                                <span>Scikit-Learn</span>
-                            </div> 
-                            <div class="project-urls">
-                                <!-- Button for the GitHub Project -->
-                                <a href="https://github.com/jmendozais/home-credit-default-risk" target="_blank"
-                                    class="project-link github">
-                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
-                                    Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="project">
-                        <!-- This is the left column -->
-                        <img src="imgs/casml.png" alt="CASML - Generative AI Hackathon" class="project-img" style="transition: opacity 0.4s;"
-                            onmouseover="this.style.opacity=0; setTimeout(()=>{this.src='imgs/casml.png'; this.style.opacity=1;}, 400);"
-                            onmouseout="this.style.opacity=0; setTimeout(()=>{this.src='imgs/casml.png'; this.style.opacity=1;}, 400);">
-
-                        <div class="project-info">
-                            <h4>CASML - Generative AI Hackathon</h4>
-                            <p>Developed a RAG system capable of answering questions based on an external PDF source.
-                                Evaluated methods for chunking. Implemented a hybrid retriever with keyword and semantic embeddings.
-                                Implemented a reranking approach based on Hypothetical Document Embeddings. 
-                            <b>Achieved a public score on par with the Top 20%</b> of the Kaggle competition participants.</p>
-                            <div class="project-tags">
-                                <span>Databricks</span>
-                                <span>LangChain</span>
-                                <span>LangGraph</span>
-                                <span>Chroma</span>
-                            </div> 
-                            <div class="project-urls">
-                                <!-- Button for the GitHub Project -->
-                                <a href="https://github.com/jmendozais/CASML-Generative-AI-Hackathon" target="_blank"
-                                    class="project-link github">
-                                    <i class="fab fa-github"></i> <!-- Icon for GitHub -->
-                                    Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="project">
+                    <div class="project-card" data-category="computer-vision">
                         <!-- This is the left column -->
                         <img src="imgs/borehole.png" alt="icig" class="project-img">
 
@@ -516,7 +597,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="project">
+                    <div class="project-card" data-category="computer-vision">
                         <!-- This is the left column -->
                         <img src="imgs/license.jpg" alt="icig" class="project-img">
 

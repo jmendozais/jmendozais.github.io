@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterCategory = e.target.dataset.category;
 
             projectCards.forEach(card => {
-                const cardCategory = card.dataset.category;
+                const cardCategories = card.dataset.category.split(' ');
                 
-                if (filterCategory === 'all' || cardCategory === filterCategory) {
+                if (filterCategory === 'all' || cardCategories.includes(filterCategory)) {
                     card.classList.remove('hide');
                 } else {
                     card.classList.add('hide');
